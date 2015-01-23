@@ -27,12 +27,14 @@ void setup()
     pinMode(2, IN);
     pinMode(4, IN);
 
-    lcd.print("  Message Top!  ");
-    lcd.setCursor(0, 1);
-    lcd.print(" Message Bottom ");
+    // Provide messages to the screen see function below for the implementation
+    lcd.printMessage("  Message Top!  ", " Message Bottom ");
 
 }
 
+/*
+ *  Change this function to have messages for each line on the display and keep incrementing the row in the setCursor method each time you move to the next line.
+ */
 void printMessage(string mess1, string mess2)
 {
     lcd.clear();
