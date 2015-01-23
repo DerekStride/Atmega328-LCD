@@ -33,27 +33,29 @@ void setup()
 
 }
 
+void printMessage(string mess1, string mess2)
+{
+    lcd.clear();
+    lcd.print(mess1);
+    lcd.setCursor(0, 1);
+    lcd.print(mess2);
+}
+
 
 void loop()
 {
 
     if ( digitalRead( inputs.at(0) ) )
     {
-        lcd.print("  Message Top2  ");
-        lcd.setCursor(0, 1);
-        lcd.print(" Message Bottom ");
+        printMessage("  Message Top2  ", " Message Bottom ");
     }
     else if ( digitalRead( inputs.at(1) ) )
     {
-        lcd.print("  Message Top3  ");
-        lcd.setCursor(0, 1);
-        lcd.print(" Message Bottom ");
+        printMessage("  Message Top3  ", " Message Bottom ");
     }
     else if ( digitalRead( inputs.at(0) ) & digitalRead( inputs.at(1) ) )
     {
-        lcd.print("  Message Top4  ");
-        lcd.setCursor(0, 1);
-        lcd.print(" Message Bottom ");
+        printMessage("  Message Top4  ", " Message Bottom ");
     }
 
 
