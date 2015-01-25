@@ -18,7 +18,6 @@ void printMessage(String mess1, String mess2)
 
 void setup()
 {
-	Serial.begin(9600);
 	lcd.begin(16, 2);
 
 	pinMode(1, INPUT_PULLUP);
@@ -29,12 +28,9 @@ void setup()
 void loop()
 {
 
-//    Serial.println(digitalRead(1), DEC);	
-
     if (!digitalRead( 1 ) )
     {
         printMessage("  Message Top4  ", " Message Bottom ");
     }
-
 
 }
