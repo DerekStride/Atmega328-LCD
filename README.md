@@ -10,8 +10,14 @@ Essentially, this is a collection of all the resources you'll need to get the mi
 
 1.  Get all the gear you'll need
 2.  Test the LCD with the Raspberry Pi using the [Adafruit_Python_CharLCD](https://github.com/adafruit/Adafruit_Python_CharLCD) library
-    *    Alternatively you can test with the Arduino Uno and Eliminate the need for this library
-3.  Test the Atmega328p with the Raspberry Pi using the    [LiquidCrystal](http://arduino.cc/en/Reference/LiquidCrystal) library
+    *    Alternatively you can test with the Arduino Uno using the    [LiquidCrystal](http://arduino.cc/en/Reference/LiquidCrystal) library and Eliminate the need for the python library
+3.  Test the Atmega328p with the Raspberry Pi using a modified avrdude
+```shell
+cd /tmp
+wget http://project-downloads.drogon.net/gertboard/avrdude_5.10-4_armhf.deb
+sudo dpkg -i avrdude_5.10-4_armhf.deb
+sudo chmod 4755 /usr/bin/avrdude
+```
 4.  Link the LCD with the Atmega328p
 
 ## The Gear You'll Need
